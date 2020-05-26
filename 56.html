@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+					p .tooltip {
+						color: #FFFFFF;
+						position: relative;
+					}
+					P .tooltip::after {
+						content: attr(title);
+						word-break: keep-all;
+						position: absolute;
+						padding: 4px 16px ;
+						color: blue;
+						background-color: #000000;
+						left: calc(100% + 60px);
+						top: 3px;
+						border: 1px solid black;
+						opacity: 0;
+						transition: all 1s;
+					}
+					p .tooltip:hover::after {
+						opacity: 1;
+						left: calc(100% + 8px);
+					p .tooltip::before {
+						content: "";
+						width: 0;
+						height: 0;
+						border: 20px solid transparent;
+					     border-right-color: aquamarine;
+						position: absolute;
+						z-index: 2;
+						left: calc(100% + 40px);
+						top: 5px;
+						opacity: 0;
+						transition: all 1s;
+					}
+					p .tooltip:hover::before {
+						opacity: 1;
+						left: calc(100% - 11px);
+					}
+					
+	</style>
+	</head>
+	<body>
+	<p>前端开发<span title="欧赔" class="tooltip">jave</span>为了联盟
+	<span title="简爱" class="tooltip">共享</span>外地两</p>	
+	</body>
+</html>
